@@ -12,6 +12,6 @@ func main() {
 	//_7_arrays_slices_maps.Solution()
 	//maps.Maps()
 
-	_8_functions.ExampleFunctionAsParameter()
+	//_8_functions.ExampleFunctionAsParameter()
 	_8_functions.ExampleVariadicFunction()
 }
