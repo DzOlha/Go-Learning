@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"time"
 )
 
 type FileManager struct {
@@ -23,7 +24,8 @@ func (f *FileManager) ReadLines() ([]string, error) {
 		return nil, errors.New("could not open file")
 	}
 
-	defer func(file *os.File) {
+	// this will be executed once the surrounding block or function finishes its execution
+	defer func(file *os.File) { // 'defer' is used to defer tha operation
 		err := file.Close()
 		if err != nil {
 			fmt.Println(err)
@@ -49,6 +51,9 @@ func (f *FileManager) WriteResult(data interface{}) error {
 	if err != nil {
 		return errors.New("could not create a file")
 	}
+
+	time.Sleep(3 * time.Second) // simulate delay
+
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {

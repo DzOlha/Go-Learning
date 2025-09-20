@@ -1,8 +1,6 @@
 package main
 
-import (
-	_9_price_calculator "go-learning/main/09-price-calculator"
-)
+import _9_price_calculator "go-learning/main/09-price-calculator"
 
 func main() {
 	//structs.RunTheApp()
@@ -17,4 +15,5 @@ func main() {
 	//_8_functions.ExampleFunctionAsParameter()
 	//_8_functions.ExampleVariadicFunction()
 	_9_price_calculator.App()
+	//_0_concurrency.App()
 }
