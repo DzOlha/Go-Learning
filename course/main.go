@@ -1,6 +1,8 @@
 package main
 
-import _8_functions "go-learning/main/08-functions"
+import (
+	_9_price_calculator "go-learning/main/09-price-calculator"
+)
 
 func main() {
 	//structs.RunTheApp()
@@ -13,5 +15,6 @@ func main() {
 	//maps.Maps()
 
 	//_8_functions.ExampleFunctionAsParameter()
-	_8_functions.ExampleVariadicFunction()
+	//_8_functions.ExampleVariadicFunction()
+	_9_price_calculator.App()
 }

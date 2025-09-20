@@ -1,0 +1,30 @@
+package _9_price_calculator
+
+import (
+	"fmt"
+	"go-learning/main/09-price-calculator/filemanager"
+	prices2 "go-learning/main/09-price-calculator/prices"
+)
+
+var filePath string = "course/09-price-calculator/prices/"
+
+func App() {
+	var taxRates = []float64{0, 0.07, 0.1, 0.15}
+
+	inputFile := filePath + "prices.txt"
+	//cmd := cmdmanager.New()
+
+	for indexRate, rate := range taxRates {
+		fm := filemanager.New(inputFile, getOutputPath(indexRate))
+		job := prices2.NewTaxIncludedPriceJob(fm, rate)
+		err := job.Process()
+		if err != nil {
+			fmt.Println("Could not process job")
+			fmt.Println(err)
+		}
+	}
+}
+
+func getOutputPath(num int) string {
+	return filePath + fmt.Sprintf("result_%v.json", num)
+}
