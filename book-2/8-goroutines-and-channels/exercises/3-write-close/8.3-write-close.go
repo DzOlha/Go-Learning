@@ -1,4 +1,4 @@
-package exercises
+package __write_close
 
 import (
 	"bufio"

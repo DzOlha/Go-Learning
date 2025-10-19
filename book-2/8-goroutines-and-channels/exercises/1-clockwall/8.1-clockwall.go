@@ -1,4 +1,4 @@
-package exercises
+package __clockwall
 
 import (
 	"bufio"
